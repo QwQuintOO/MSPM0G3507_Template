@@ -1,0 +1,87 @@
+version: "4.1"
+name: MSPM0G3507_Template
+type: ARM
+deviceName: null
+packDir: null
+srcDirs:
+  - CMSIS
+  - Startup
+  - User
+  - ti
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: d18272e7e0f42d0e0734f731e130b6df
+targets:
+  Debug:
+    cppPreprocessAttrs:
+      defineList:
+        - __MSPM0G3507__
+        - __MSPM0G350X__
+        - DeviceFamily_MSPM0G350X
+      incList:
+        - CMSIS
+        - CMSIS/Core/Include
+        - User
+        - ti/driverlib/m0p/sysctl
+        - ti/driverlib
+        - ti/driverlib/m0p
+        - ti/devices
+      libList: []
+    excludeList: []
+    settings:
+      debugger: cortex-debug
+    toolchain: GCC
+    toolchainConfigMap:
+      GCC:
+        archExtensions: ""
+        cpuType: Cortex-M0+
+        floatingPointHardware: none
+        options:
+          version: 5
+          afterBuildTasks: []
+          asm-compiler:
+            ASM_FLAGS: ""
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: ""
+            C_FLAGS: ""
+            language-c: c11
+            language-cpp: c++11
+            one-elf-section-per-data: true
+            one-elf-section-per-function: true
+            optimization: level-debug
+            warnings: all-warnings
+          global:
+            $float-abi-type: hard
+            misc-control: ""
+            not-use-syscalls: true
+            output-debug-info: enable
+            use-newlib-nano: true
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            LD_FLAGS: ""
+            LIB_FLAGS: -lm
+            output-format: elf
+            remove-unused-input-sections: true
+        scatterFilePath: mspm0g3507.lds
+        storageLayout:
+          RAM: []
+          ROM: []
+        useCustomScatterFile: true
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: "null"
+          vendor: "null"
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+    uploader: JLink
