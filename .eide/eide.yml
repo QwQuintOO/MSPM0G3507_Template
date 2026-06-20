@@ -8,6 +8,7 @@ srcDirs:
   - BSP
   - User
   - ti
+  - FreeRTOS
 virtualFolder:
   name: <virtual_root>
   files: []
@@ -41,6 +42,11 @@ targets:
         - BSP/Inc
         - Application/Inc
         - .
+        - FreeRTOS
+        - FreeRTOS/include
+        - FreeRTOS/portable
+        - FreeRTOS/portable/MemMang
+        - FreeRTOS/portable/GCC/ARM_CM0
       libList: []
     excludeList: []
     settings:
