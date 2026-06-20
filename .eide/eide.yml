@@ -6,13 +6,16 @@ packDir: null
 srcDirs:
   - Application
   - BSP
-  - startup_system_files
   - User
   - ti
 virtualFolder:
   name: <virtual_root>
   files: []
-  folders: []
+  folders:
+    - name: Startup
+      files:
+        - path: startup_mspm0g350x_gcc.c
+      folders: []
 dependenceList: []
 outDir: build
 miscInfo:
@@ -76,7 +79,7 @@ targets:
             LIB_FLAGS: -lm
             output-format: elf
             remove-unused-input-sections: true
-        scatterFilePath: linker_files\gcc\mspm0g3507.lds
+        scatterFilePath: mspm0g3507.lds
         storageLayout:
           RAM: []
           ROM: []
