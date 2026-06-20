@@ -4,8 +4,9 @@ type: ARM
 deviceName: null
 packDir: null
 srcDirs:
-  - CMSIS
-  - Startup
+  - Application
+  - BSP
+  - startup_system_files
   - User
   - ti
 virtualFolder:
@@ -15,22 +16,28 @@ virtualFolder:
 dependenceList: []
 outDir: build
 miscInfo:
-  uid: d18272e7e0f42d0e0734f731e130b6df
+  uid: d4952b94ac87fbc40843e47ad4b51f85
 targets:
   Debug:
     cppPreprocessAttrs:
       defineList:
         - __MSPM0G3507__
-        - __MSPM0G350X__
-        - DeviceFamily_MSPM0G350X
+        - SYSCFG_ENABLE_DEBUG
       incList:
-        - CMSIS
-        - CMSIS/Core/Include
-        - User
-        - ti/driverlib/m0p/sysctl
+        - ti/CMSIS/Core/Include
         - ti/driverlib
         - ti/driverlib/m0p
+        - ti/driverlib/m0p/sysctl
         - ti/devices
+        - ti/devices/msp
+        - ti/devices/msp/m0p
+        - ti/devices/msp/peripherals
+        - ti/devices/msp/peripherals/m0p
+        - ti/devices/msp/peripherals/m0p/sysctl
+        - User
+        - BSP/Inc
+        - Application/Inc
+        - .
       libList: []
     excludeList: []
     settings:
@@ -69,7 +76,7 @@ targets:
             LIB_FLAGS: -lm
             output-format: elf
             remove-unused-input-sections: true
-        scatterFilePath: mspm0g3507.lds
+        scatterFilePath: linker_files\gcc\mspm0g3507.lds
         storageLayout:
           RAM: []
           ROM: []

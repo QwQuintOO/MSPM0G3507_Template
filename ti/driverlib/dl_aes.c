@@ -30,7 +30,7 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <dl_aes.h>
+#include <ti/driverlib/dl_aes.h>
 
 #ifdef __MSPM0_HAS_AES__
 

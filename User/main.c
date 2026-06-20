@@ -1,14 +1,14 @@
-#include"main.h"
+#include "main.h"
 
 
-int main(void)
+#include "mspm0g350x.h"
+
+
+int main (void) 
 {
-
-    while (1)
+    
+    while (1) 
     {
-        ;
+        
     }
-    return 0;
 }
-
-

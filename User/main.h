@@ -1,5 +1,8 @@
-#ifndef     __MAIN_H_
-#define     __MAIN_H_
+#ifndef     __MAIN_H
+#define     __MAIN_H
 
 
-#endif
+
+
+#endif  /* __MAIN_H */
+
