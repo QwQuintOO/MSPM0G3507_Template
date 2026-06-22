@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName)
 {
     (void)xTask;
@@ -10,10 +9,10 @@ void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName)
     for( ;; );
 }
 
+
 int main (void) 
 {
-    
-    while (1) 
+    while (1)
     {
         
     }
